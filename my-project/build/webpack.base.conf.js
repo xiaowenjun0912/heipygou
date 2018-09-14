@@ -52,19 +52,12 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|vue)$/,
-        loader: 'eslint-loader',
-        enforce: 'pre',
-        include: [resolve('src'), resolve('test')],
-        options: {
-          formatter: require('eslint-friendly-formatter')
-        }
-      },
-      {
         test: /\.vue$/,
         loader: 'mpvue-loader',
         options: vueLoaderConfig
       },
+         // 增加 less解析的规则
+         { test: /\.less$/, loader: "style-loader!css-loader!less-loader" },
       {
         test: /\.js$/,
         include: [resolve('src'), resolve('test')],
