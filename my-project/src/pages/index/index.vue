@@ -70,7 +70,7 @@ export default {
       }
     },
     // 生命周期函数
-    onLoad() {
+    onLoadxxx() {
       // 获取轮播图的数据
       tool.thenAjax({
         url:'api/public/v1/home/swiperdata'
